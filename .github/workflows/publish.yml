@@ -1,3 +1,4 @@
+name: Publish Package To NPM
 on: push
 
 jobs:
@@ -9,7 +10,7 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-      - run: npm test
+      - run: npm build
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
