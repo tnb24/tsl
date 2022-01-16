@@ -1,3 +1,12 @@
-# ts-npm-template
+# TSL
+Type-safe last.fm API wrapper
+## NOTE: UNDER DEVELOPMENT
 
-Quickstart a node module with TypeScript
+## Getting Started
+```bash
+# Yarn
+yarn install tsl
+
+# NPM
+npm install tsl
+```
