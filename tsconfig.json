@@ -2,7 +2,6 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "ES6",
-    "sourceMap": false,
     "esModuleInterop": true,
     "declaration": true,
     "rootDir": "src",
@@ -10,5 +9,5 @@
     "strict": true,
     "importHelpers": true
   },
-  "exclude": ["node_modules", "dist", "__tests__"]
+  "exclude": ["node_modules", "dist"]
 }

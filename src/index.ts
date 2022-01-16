@@ -4,7 +4,7 @@ export class Client {
   readonly KEY: string;
   API_LINK: string;
   constructor(API_KEY: string) {
-    this.KEY = API_KEY,
+    this.KEY = API_KEY, 
     this.API_LINK = "http://ws.audioscrobbler.com/2.0"
   }
   async getTopArtists(username: string, period?: string, limit?: number, page?: number) {
