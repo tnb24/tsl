@@ -1,4 +1,4 @@
-import { getTopArtists } from "./queries/getTopArtists";
+import { getTopArtists } from "./handlers/getTopArtists";
 
 export { getTopArtists };
 

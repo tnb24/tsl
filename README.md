@@ -1,4 +1,5 @@
 # TSL
+
 Type-safe last.fm API wrapper
 
 ## NOTE: UNDER DEVELOPMENT. NEED TO ~~WRITE A CLIENT~~ AND MORE METHODS
@@ -27,4 +28,5 @@ const client = new Client(process.env.LASTFM_TOKEN)(async () => {
 ```
 
 ## Why?
+
 There were no good wrappers for the Last.fm API so I made my own :smile:
