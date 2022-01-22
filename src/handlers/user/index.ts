@@ -1,4 +1,4 @@
 import { getTopArtists } from "./getTopArtists";
 import { getTopAlbums } from "./getTopAlbums";
-
-export { getTopAlbums, getTopArtists}
+import { getTopTracks } from "./getTopTracks";
+export { getTopAlbums, getTopArtists, getTopTracks}

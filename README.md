@@ -26,11 +26,15 @@ const client = new Client(process.env.LASTFM_TOKEN)
 (async () => {
   // get the top artists of an user
   console.log(
-    await client.getTopArtists("KidnappingNemo", "7day", 10)
+    await client.getTopArtists("KidnappingNemo", "7day", 5)
   ); 
   // get the top albums of an user
     console.log(
-    await client.getTopAlbums("KidnappingNemo", "7day", 10)
+    await client.getTopAlbums("KidnappingNemo", "7day", 5)
+  )
+    // get the top songs of an user
+    console.log(
+    await client.getTopTracks("KidnappingNemo", "7day", 5)
   )
 })();
 ```
