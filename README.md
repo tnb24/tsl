@@ -21,11 +21,17 @@ import { Client } from "type-safe-lastfm";
 
 const client = new Client(process.env.LASTFM_TOKEN)
 
+/* username is mandatory, time limit and the limit of number of artists is optional */
+
 (async () => {
-  // get the top artists of a user
+  // get the top artists of an user
   console.log(
     await client.getTopArtists("KidnappingNemo", "7day", 10)
-  ); /* username is mandatory, time limit and the limit of number of artists is optional */
+  ); 
+  // get the top albums of an user
+    console.log(
+    await client.getTopAlbums("KidnappingNemo", "7day", 10)
+  )
 })();
 ```
 
