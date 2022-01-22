@@ -19,7 +19,9 @@ npm install tsl
 ```ts
 import { Client } from "type-safe-lastfm";
 
-const client = new Client(process.env.LASTFM_TOKEN)(async () => {
+const client = new Client(process.env.LASTFM_TOKEN)
+
+(async () => {
   // get the top artists of a user
   console.log(
     await client.getTopArtists("KidnappingNemo", "7day", 10)
