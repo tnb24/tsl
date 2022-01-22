@@ -2,7 +2,7 @@
 
 Type-safe last.fm API wrapper
 
-## NOTE: UNDER DEVELOPMENT. NEED TO ~~WRITE A CLIENT~~ AND MORE METHODS
+## NOTE: THIS IS STILL UNDER DEVELOPMENT
 
 ## Getting Started
 
