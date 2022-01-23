@@ -4,6 +4,7 @@ export async function getRecentTracks(
   API_LINK: string,
   KEY: string,
   username: string,
+  limit?: number,
   from?: string,
   to?: string,
   extended?: number,
@@ -15,6 +16,7 @@ export async function getRecentTracks(
       params: {
         method: method,
         username,
+        limit,
         api_key: KEY,
         format: "json",
         from,

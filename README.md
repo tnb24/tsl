@@ -1,4 +1,5 @@
 # Khojo
+
 [![Publish Package To NPM](https://github.com/tnb24/khojo/actions/workflows/publish.yml/badge.svg)](https://github.com/tnb24/khojo/actions/workflows/publish.yml)
 
 :mag_right: Type-safe last.fm API wrapper
@@ -36,12 +37,12 @@ const client = new Client(process.env.LASTFM_TOKEN);
       console.log(
       await client.getTopTracks("KidnappingNemo", "7day", 5)
     )
-    /* username is mandatory, from and to are optional but recommended*/
+      /* username is mandatory, limit is optional but recommended*/
 
-    // get the recent tracks listening by a user between a specific period
-    console.log(
-        await client.getRecentTracks("KidnappingNemo", "1640975400", "1641493800")
-    )
+      // get the recent tracks listening by a user
+      console.dir(
+          await client.getRecentTracks("KidnappingNemo", 1)
+      )
   }();
 ```
 
