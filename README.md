@@ -1,4 +1,4 @@
-# TSL
+# Khojo
 
 Type-safe last.fm API wrapper
 
@@ -8,10 +8,10 @@ Type-safe last.fm API wrapper
 
 ```bash
 # Yarn
-yarn install tsl
+yarn install khojo
 
 # NPM
-npm install tsl
+npm install khojo
 ```
 
 ## Example
@@ -19,24 +19,31 @@ npm install tsl
 ```ts
 import { Client } from "type-safe-lastfm";
 
-const client = new Client(process.env.LASTFM_TOKEN)
+const client = new Client(process.env.LASTFM_TOKEN);
 
-/* username is mandatory, time limit and the limit of number of artists is optional */
+(
+  /* username is mandatory, time limit and the limit of number of artists is optional */
 
-(async () => {
-  // get the top artists of an user
-  console.log(
-    await client.getTopArtists("KidnappingNemo", "7day", 5)
-  ); 
-  // get the top albums of an user
+  async () => {
+    // get the top artists of an user
     console.log(
-    await client.getTopAlbums("KidnappingNemo", "7day", 5)
-  )
-    // get the top songs of an user
+      await client.getTopArtists("KidnappingNemo", "7day", 5)
+    );
+    // get the top albums of an user
+      console.log(
+      await client.getTopAlbums("KidnappingNemo", "7day", 5)
+    )
+      // get the top songs of an user
+      console.log(
+      await client.getTopTracks("KidnappingNemo", "7day", 5)
+    )
+    /* username is mandatory, from and to are optional but recommended*/
+
+    // get the recent tracks listening by a user between a specific period
     console.log(
-    await client.getTopTracks("KidnappingNemo", "7day", 5)
-  )
-})();
+        await client.getRecentTracks("KidnappingNemo", "1640975400", "1641493800")
+    )
+  }();
 ```
 
 ## Why?
