@@ -1,6 +1,6 @@
 # Khojo
 
-Type-safe last.fm API wrapper
+:mag_right: Type-safe last.fm API wrapper
 
 ## NOTE: THIS IS STILL UNDER DEVELOPMENT
 
