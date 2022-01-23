@@ -1,4 +1,5 @@
 # Khojo
+[![Publish Package To NPM](https://github.com/tnb24/khojo/actions/workflows/publish.yml/badge.svg)](https://github.com/tnb24/khojo/actions/workflows/publish.yml)
 
 :mag_right: Type-safe last.fm API wrapper
 
