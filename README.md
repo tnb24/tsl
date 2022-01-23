@@ -2,8 +2,6 @@
 
 :mag_right: Type-safe last.fm API wrapper
 
-## NOTE: THIS IS STILL UNDER DEVELOPMENT
-
 ## Getting Started
 
 ```bash
@@ -48,4 +46,6 @@ const client = new Client(process.env.LASTFM_TOKEN);
 
 ## Why?
 
-There were no good wrappers for the Last.fm API so I made my own :smile:
+There were no good wrappers for the Last.fm API so I made my own :smile:. Also, if you are curious about the name it means search in Hindi
+
+:stop_sign: This library is still under active development. Expect bugs and feel free to open pull requests to fix them 🤝
