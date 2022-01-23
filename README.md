@@ -17,7 +17,7 @@ npm install khojo
 ## Example
 
 ```ts
-import { Client } from "type-safe-lastfm";
+import { Client } from "khojo";
 
 const client = new Client(process.env.LASTFM_TOKEN);
 
