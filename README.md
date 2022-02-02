@@ -8,7 +8,7 @@
 
 ```bash
 # Yarn
-yarn install khojo
+yarn add khojo
 
 # NPM
 npm install khojo
