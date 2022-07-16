@@ -8,7 +8,7 @@
     "prepublishOnly": "npm run build",
     "build": "tsc",
     "lint": "eslint --fix .",
-    "prettify": "prettier --write ."
+    "format": "prettier --write ."
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

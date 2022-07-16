@@ -1,3 +1,3 @@
-import { getTopArtists, getTopAlbums, getTopTracks, getRecentTracks } from "./user/index";
+import { getTopArtists, getTopAlbums, getTopTracks, getRecentTracks, getInfo } from "./user/index";
 
-export { getTopAlbums, getTopArtists, getTopTracks, getRecentTracks };
+export { getTopAlbums, getTopArtists, getTopTracks, getRecentTracks, getInfo };

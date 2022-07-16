@@ -1,4 +1,4 @@
-import { getTopArtists, getTopAlbums, getTopTracks, getRecentTracks } from "./handlers/index";
+import { getTopArtists, getTopAlbums, getTopTracks, getRecentTracks, getInfo } from "./handlers/index";
 
 export class Client {
   readonly KEY: string;
@@ -17,6 +17,7 @@ export class Client {
     extended?: number,
     page?: number
   ) => getRecentTracks(this.API_LINK, this.KEY, username, limit, from, to, extended, page);
+  public readonly getInfo = (username: string) => getInfo(this.API_LINK, this.KEY, username);
   constructor(API_KEY: string) {
     (this.KEY = API_KEY), (this.API_LINK = "http://ws.audioscrobbler.com/2.0");
   }
