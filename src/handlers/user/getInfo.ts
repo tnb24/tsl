@@ -12,7 +12,6 @@ export async function getInfo(API_LINK: string, KEY: string, username: string) {
       },
     });
     const ProfileInfo = await data.data.user;
-    console.log(ProfileInfo);
     return ProfileInfo;
   } catch (error) {
     console.error(error);
