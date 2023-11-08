@@ -13,7 +13,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "axios": "1.4.0",
+    "axios": "1.6.1",
     "tslib": "^2.1.0"
   },
   "devDependencies": {
