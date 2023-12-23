@@ -1,28 +1,20 @@
 import axios from "axios";
+import { getRecentTracks } from "../../types/types";
 
-export async function getRecentTracks(
-  API_LINK: string,
-  KEY: string,
-  username: string,
-  limit?: number,
-  from?: string,
-  to?: string,
-  extended?: number,
-  page?: number
-) {
+export async function getRecentTracks(params: getRecentTracks) {
   try {
     const method = "user.getrecenttracks";
-    const data = await axios.get(API_LINK, {
+    const data = await axios.get(params.API_LINK, {
       params: {
-        method: method,
-        username,
-        limit,
-        api_key: KEY,
+        method,
+        username: params.username,
+        limit: params.limit,
+        api_key: params.KEY,
         format: "json",
-        from,
-        to,
-        extended,
-        page,
+        from: params.from,
+        to: params.to,
+        extended: params.extended,
+        page: params.page,
       },
     });
     const RecentTracks = await data.data.recenttracks;

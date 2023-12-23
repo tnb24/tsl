@@ -1,13 +1,14 @@
 import axios from "axios";
+import { getInfo } from "../../types/types";
 
-export async function getInfo(API_LINK: string, KEY: string, username: string) {
+export async function getInfo(params: getInfo) {
   try {
     const method = "user.getinfo";
-    const data = await axios.get(API_LINK, {
+    const data = await axios.get(params.API_LINK, {
       params: {
-        method: method,
-        username,
-        api_key: KEY,
+        method,
+        username: params.username,
+        api_key: params.KEY,
         format: "json",
       },
     });

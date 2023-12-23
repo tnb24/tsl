@@ -1,24 +1,18 @@
 import axios from "axios";
+import { getTopTracks } from "../../types/types";
 
-export async function getTopTracks(
-  API_LINK: string,
-  KEY: string,
-  username: string,
-  period?: string,
-  limit?: number,
-  page?: number
-) {
+export async function getTopTracks(params: getTopTracks) {
   try {
     const method = "user.gettoptracks";
-    const data = await axios.get(API_LINK, {
+    const data = await axios.get(params.API_LINK, {
       params: {
-        method: method,
-        username,
-        api_key: KEY,
+        method,
+        username: params.username,
+        api_key: params.KEY,
         format: "json",
-        period,
-        limit,
-        page,
+        period: params.period,
+        limit: params.limit,
+        page: params.page,
       },
     });
     const TopTracks = await data.data.toptracks;

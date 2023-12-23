@@ -1,24 +1,18 @@
 import axios from "axios";
+import { getTopAlbums } from "../../types/types";
 
-export async function getTopAlbums(
-  API_LINK: string,
-  KEY: string,
-  username: string,
-  period?: string,
-  limit?: number,
-  page?: number
-) {
+export async function getTopAlbums(params: getTopAlbums) {
   try {
     const method = "user.gettopalbums";
-    const data = await axios.get(API_LINK, {
+    const data = await axios.get(params.API_LINK, {
       params: {
-        method: method,
-        username,
-        api_key: KEY,
+        method,
+        username: params.username,
+        api_key: params.KEY,
         format: "json",
-        period,
-        limit,
-        page,
+        period: params.period,
+        limit: params.limit,
+        page: params.page,
       },
     });
     const TopAlbums = await data.data.topalbums;
