@@ -48,6 +48,6 @@ const client = new Client(process.env.LASTFM_TOKEN);
 
 ## Why?
 
-There were no good wrappers for the Last.fm API so I made my own :smile:. Also, if you are curious about the name it means search in Hindi
+There were no good wrappers for the Last.fm API so I made my own.
 
 :stop_sign: This library is still under active development. Expect bugs and feel free to open pull requests to fix them 🤝
