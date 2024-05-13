@@ -4,37 +4,88 @@ export class Client {
   readonly KEY: string;
   API_LINK: string;
 
-  public readonly getTopArtists = (
+  public readonly getTopArtists = async (
     username: string,
     timePeriod?: string,
     artistLimit?: number,
-    page?: number
-  ) => getTopArtists({ API_LINK: this.API_LINK, KEY: this.KEY, username, period: timePeriod, limit: artistLimit, page });
+    page?: number,
+  ) => {
+    try {
+      return await getTopArtists({
+        API_LINK: this.API_LINK,
+        KEY: this.KEY,
+        username,
+        period: timePeriod,
+        limit: artistLimit,
+        page,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  public readonly getTopAlbums = (
-    username: string,
-    timePeriod?: string,
-    artistLimit?: number,
-    page?: number
-  ) => getTopAlbums({ API_LINK: this.API_LINK, KEY: this.KEY, username, period: timePeriod, limit: artistLimit, page});
+  public readonly getTopAlbums = async (username: string, timePeriod?: string, artistLimit?: number, page?: number) => {
+    try {
+      return await getTopAlbums({
+        API_LINK: this.API_LINK,
+        KEY: this.KEY,
+        username,
+        period: timePeriod,
+        limit: artistLimit,
+        page,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  public readonly getTopTracks = (
-    username: string,
-    timePeriod?: string,
-    artistLimit?: number,
-    page?: number
-  ) => getTopTracks({ API_LINK: this.API_LINK, KEY: this.KEY, username, period: timePeriod, limit: artistLimit, page});
+  public readonly getTopTracks = async (username: string, timePeriod?: string, artistLimit?: number, page?: number) => {
+    try {
+      return await getTopTracks({
+        API_LINK: this.API_LINK,
+        KEY: this.KEY,
+        username,
+        period: timePeriod,
+        limit: artistLimit,
+        page,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  public readonly getRecentTracks = (
+  public readonly getRecentTracks = async (
     username: string,
     limit?: number,
     from?: string,
     to?: string,
     extended?: number,
-    page?: number
-  ) => getRecentTracks({ API_LINK: this.API_LINK, KEY: this.KEY, username, limit, from, to, extended, page });
+    page?: number,
+  ) => {
+    try {
+      return await getRecentTracks({
+        API_LINK: this.API_LINK,
+        KEY: this.KEY,
+        username,
+        limit,
+        from,
+        to,
+        extended,
+        page,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  public readonly getInfo = (username: string) => getInfo({ API_LINK: this.API_LINK, KEY: this.KEY, username});
+  public readonly getInfo = async (username: string) => {
+    try {
+      const profileInfo = await getInfo({ API_LINK: this.API_LINK, KEY: this.KEY, username });
+      return profileInfo;
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   constructor(API_KEY: string) {
     this.KEY = API_KEY;

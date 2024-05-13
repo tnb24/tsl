@@ -4,6 +4,7 @@
   "repository": "https://github.com/tnb24/khojo",
   "author": "Tanay Bhardwaj <tanaybhardwaj24@gmail.com>",
   "license": "AGPL-3.0-or-later",
+  "type": "module",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc",
@@ -12,9 +13,9 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "dependencies": {
     "axios": "1.6.2",
+    "khojo": "^1.0.2",
     "tslib": "2.6.2"
   },
   "devDependencies": {

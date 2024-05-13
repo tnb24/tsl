@@ -20,25 +20,17 @@ npm install khojo
 import { Client } from "khojo";
 
 const client = new Client(process.env.LASTFM_TOKEN);
-  /* username is mandatory, time limit and the limit of number of artists is optional */
-    // get the top artists of an user
-    console.log(
-      await client.getTopArtists("KidnappingNemo", "7day", 5)
-    );
-    // get the top albums of an user
-      console.log(
-      await client.getTopAlbums("KidnappingNemo", "7day", 5)
-    )
-      // get the top songs of an user
-      console.log(
-      await client.getTopTracks("KidnappingNemo", "7day", 5)
-    )
-      /* username is mandatory, limit is optional but recommended*/
+/* username is mandatory, time limit and the limit of number of artists is optional */
+// get the top artists of an user
+console.log(await client.getTopArtists("KidnappingNemo", "7day", 5));
+// get the top albums of an user
+console.log(await client.getTopAlbums("KidnappingNemo", "7day", 5));
+// get the top songs of an user
+console.log(await client.getTopTracks("KidnappingNemo", "7day", 5));
+/* username is mandatory, limit is optional but recommended*/
 
-      // get the recent tracks listening by a user
-      console.dir(
-          await client.getRecentTracks("KidnappingNemo", 1)
-      )
+// get the recent tracks listening by a user
+console.dir(await client.getRecentTracks("KidnappingNemo", 1));
 ```
 
 ## Why?
