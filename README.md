@@ -20,11 +20,7 @@ npm install khojo
 import { Client } from "khojo";
 
 const client = new Client(process.env.LASTFM_TOKEN);
-
-(
   /* username is mandatory, time limit and the limit of number of artists is optional */
-
-  async () => {
     // get the top artists of an user
     console.log(
       await client.getTopArtists("KidnappingNemo", "7day", 5)
@@ -43,7 +39,6 @@ const client = new Client(process.env.LASTFM_TOKEN);
       console.dir(
           await client.getRecentTracks("KidnappingNemo", 1)
       )
-  }();
 ```
 
 ## Why?
