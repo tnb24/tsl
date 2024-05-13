@@ -1,6 +1,7 @@
 import axios from "axios";
 import { getTopArtists } from "../../types/types";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function getTopArtists(params: getTopArtists) {
   try {
     const method = "user.gettopartists";
@@ -19,5 +20,6 @@ export async function getTopArtists(params: getTopArtists) {
     return TopArtists;
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
