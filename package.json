@@ -15,7 +15,6 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "axios": "1.6.2",
-    "khojo": "^1.0.2",
     "tslib": "2.6.2"
   },
   "devDependencies": {
