@@ -1,0 +1,1 @@
+export { getTopArtists } from './api/getTopArtists';
